@@ -1200,24 +1200,64 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Skill tab filtering
-    document.getElementById('skillTabs').addEventListener('click', e => {
-      const btn = e.target.closest('.skill-tab');
+    document.getElementById('skillTabs').addEventListener('click', function(e) {
+      var btn = e.target.closest('.skill-tab');
       if (!btn) return;
-      document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.skill-tab').forEach(function(t) { t.classList.remove('active'); });
       btn.classList.add('active');
-      const cat = btn.dataset.cat;
-      document.querySelectorAll('.pill').forEach(p => {
+      var cat = btn.dataset.cat;
+      document.querySelectorAll('.pill').forEach(function(p) {
         p.classList.toggle('hidden', cat !== 'all' && p.dataset.cat !== cat);
       });
     });
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
+    // Scroll reveal — mark all visible on load immediately, then watch rest
+    function revealAll() {
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(function(el) {
+        // If already in viewport on load, show immediately
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('visible');
+        } else {
+          observer.observe(el);
+        }
+      });
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', revealAll);
+    } else {
+      revealAll();
+    }
+
+    // Skill bar animation on scroll
+    var bars = document.querySelectorAll('.skill-level-fill');
+    var barObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-      
+          entry.target.style.animationPlayState = 'running';
+          barObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    bars.forEach(function(bar) {
+      bar.style.animationPlayState = 'paused';
+      barObserver.observe(bar);
+    });
+  </script>
+</body>
+</html>
