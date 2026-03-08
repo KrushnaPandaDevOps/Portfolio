@@ -657,6 +657,7 @@
     <p class="section-label reveal">Core Competencies</p>
     <h2 class="reveal">Technical Skills<span class="blink"></span></h2>
 
+    <!-- Featured skill cards -->
     <div class="skills-grid reveal">
       <div class="skill-card">
         <div class="skill-icon">🏗️</div>
@@ -666,9 +667,15 @@
       </div>
       <div class="skill-card">
         <div class="skill-icon">☁️</div>
-        <div class="skill-name">Cloud Platforms (AWS)</div>
-        <div class="skill-desc">Hands-on with EC2, VPC, S3, IAM, RDS, and CloudWatch. Migrating workloads from on-prem to AWS and building cloud-native patterns.</div>
-        <div class="skill-level"><div class="skill-level-fill" style="width:78%"></div></div>
+        <div class="skill-name">Hybrid & Multi-Cloud</div>
+        <div class="skill-desc">AWS, Microsoft Azure, and on-prem data centres managed in parallel — workload migration, cost governance, and unified IAM across environments.</div>
+        <div class="skill-level"><div class="skill-level-fill" style="width:88%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🚨</div>
+        <div class="skill-name">SRE & Incident Management</div>
+        <div class="skill-desc">SLA/SLO definition, PagerDuty AIOps, on-call runbooks, and blameless post-mortems. Certified Incident Responder with ITIL-aligned processes.</div>
+        <div class="skill-level"><div class="skill-level-fill" style="width:92%"></div></div>
       </div>
       <div class="skill-card">
         <div class="skill-icon">⚙️</div>
@@ -678,96 +685,399 @@
       </div>
       <div class="skill-card">
         <div class="skill-icon">🐳</div>
-        <div class="skill-name">Docker & Containers</div>
+        <div class="skill-name">Docker & Kubernetes</div>
         <div class="skill-desc">Containerizing workloads, writing Dockerfiles, managing images and registries. Building toward full Kubernetes orchestration in practice.</div>
-        <div class="skill-level"><div class="skill-level-fill" style="width:72%"></div></div>
+        <div class="skill-level"><div class="skill-level-fill" style="width:65%"></div></div>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">☸️</div>
-        <div class="skill-name">Kubernetes (Learning)</div>
-        <div class="skill-desc">Studying cluster architecture, deployments, services, ConfigMaps, and Helm. Applying concepts in lab environments and personal projects.</div>
-        <div class="skill-level"><div class="skill-level-fill" style="width:55%"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">📊</div>
-        <div class="skill-name">CI/CD & Observability</div>
-        <div class="skill-desc">Building pipelines with Jenkins and GitHub Actions. Monitoring with Prometheus, Grafana, and ELK stack — SRE principles in practice.</div>
-        <div class="skill-level"><div class="skill-level-fill" style="width:68%"></div></div>
+        <div class="skill-icon">🔐</div>
+        <div class="skill-name">Security & IAM</div>
+        <div class="skill-desc">Okta SSO, CyberArk PAM, CrowdStrike Falcon EDR, Illumio micro-segmentation, Active Directory, and Microsoft Entra ID deployment.</div>
+        <div class="skill-level"><div class="skill-level-fill" style="width:90%"></div></div>
       </div>
     </div>
 
-    <div class="tags reveal">
-      <span class="tag">Linux</span><span class="tag">Python</span><span class="tag">Bash</span>
-      <span class="tag">Ansible</span><span class="tag">Terraform</span><span class="tag">Docker</span>
-      <span class="tag">Kubernetes</span><span class="tag">AWS</span><span class="tag">VMware</span>
-      <span class="tag">OpenStack</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span>
-      <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">ELK Stack</span>
-      <span class="tag">Networking</span><span class="tag">Git</span><span class="tag">ITIL</span>
+    <!-- Tabbed full skill browser -->
+    <div class="skill-browser reveal">
+      <div class="skill-tabs" id="skillTabs">
+        <button class="skill-tab active" data-cat="all">All Skills</button>
+        <button class="skill-tab" data-cat="industry">Industry Knowledge</button>
+        <button class="skill-tab" data-cat="tools">Tools &amp; Technologies</button>
+        <button class="skill-tab" data-cat="devops">DevOps / SRE (Learning)</button>
+      </div>
+
+      <div class="skill-pills" id="skillPills">
+        <!-- Industry Knowledge -->
+        <span class="pill" data-cat="industry">SRE Principles &amp; SLA/SLO Management</span>
+        <span class="pill" data-cat="industry">ITIL/ITSM Process Implementation</span>
+        <span class="pill" data-cat="industry">Hybrid Cloud &amp; Multi-Cloud Management</span>
+        <span class="pill" data-cat="industry">Incident Management</span>
+        <span class="pill" data-cat="industry">Cloud Computing</span>
+        <span class="pill" data-cat="industry">Identity and Access Management (IAM)</span>
+        <span class="pill" data-cat="industry">Agile Methodologies</span>
+        <span class="pill" data-cat="industry">Virtualization</span>
+        <span class="pill" data-cat="industry">Storage Systems</span>
+        <span class="pill" data-cat="industry">Linux System Administration</span>
+        <span class="pill" data-cat="industry">Backup &amp; Recovery Systems</span>
+        <span class="pill" data-cat="industry">Server Monitoring</span>
+        <!-- Tools & Technologies -->
+        <span class="pill" data-cat="tools">VMware Infrastructure</span>
+        <span class="pill" data-cat="tools">VMware vSphere</span>
+        <span class="pill" data-cat="tools">Amazon Web Services (AWS)</span>
+        <span class="pill" data-cat="tools">Microsoft Azure</span>
+        <span class="pill" data-cat="tools">Microsoft 365</span>
+        <span class="pill" data-cat="tools">Microsoft Entra ID</span>
+        <span class="pill" data-cat="tools">Active Directory</span>
+        <span class="pill" data-cat="tools">Windows Server</span>
+        <span class="pill" data-cat="tools">Linux</span>
+        <span class="pill" data-cat="tools">PagerDuty</span>
+        <span class="pill" data-cat="tools">PagerDuty AIOps</span>
+        <span class="pill" data-cat="tools">Okta Single Sign-On</span>
+        <span class="pill" data-cat="tools">CrowdStrike Falcon</span>
+        <span class="pill" data-cat="tools">CyberArk</span>
+        <span class="pill" data-cat="tools">Illumio</span>
+        <span class="pill" data-cat="tools">Infoblox</span>
+        <span class="pill" data-cat="tools">ServiceNow</span>
+        <span class="pill" data-cat="tools">Microsoft SQL Server</span>
+        <span class="pill" data-cat="tools">System Center</span>
+        <span class="pill" data-cat="tools">Microsoft Endpoint Configuration Manager</span>
+        <span class="pill" data-cat="tools">Storage Area Network (SAN)</span>
+        <span class="pill" data-cat="tools">Veeam</span>
+        <span class="pill" data-cat="tools">WSUS</span>
+        <span class="pill" data-cat="tools">BigFix</span>
+        <span class="pill" data-cat="tools">Email Security</span>
+        <span class="pill" data-cat="tools">Mail Server</span>
+        <!-- DevOps / SRE Learning -->
+        <span class="pill learning" data-cat="devops">Docker</span>
+        <span class="pill learning" data-cat="devops">Kubernetes</span>
+        <span class="pill learning" data-cat="devops">Terraform</span>
+        <span class="pill learning" data-cat="devops">Ansible</span>
+        <span class="pill learning" data-cat="devops">Jenkins</span>
+        <span class="pill learning" data-cat="devops">GitHub Actions</span>
+        <span class="pill learning" data-cat="devops">Prometheus</span>
+        <span class="pill learning" data-cat="devops">Grafana</span>
+        <span class="pill learning" data-cat="devops">ELK Stack</span>
+        <span class="pill learning" data-cat="devops">Python</span>
+        <span class="pill learning" data-cat="devops">Bash Scripting</span>
+        <span class="pill learning" data-cat="devops">CI/CD Pipelines</span>
+      </div>
+
+      <p class="pills-note">
+        <span style="color:var(--accent)">■</span> Proficient &nbsp;·&nbsp;
+        <span style="color:var(--accent2)">■</span> Actively learning
+      </p>
+    </div>
+
+    <!-- Certifications row -->
+    <div class="certs-row reveal">
+      <div class="cert-badge">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">ITIL Certified</div>
+        <div class="cert-sub">ITIL Foundation</div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">PSM I</div>
+        <div class="cert-sub">Professional Scrum Master™ I</div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">MCSE</div>
+        <div class="cert-sub">Cloud Platform &amp; Infrastructure</div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">Incident Responder</div>
+        <div class="cert-sub">PagerDuty Certified</div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-icon">🏅</div>
+        <div class="cert-name">Microsoft Entra ID</div>
+        <div class="cert-sub">Deploying Microsoft Entra ID</div>
+      </div>
     </div>
   </section>
+
+  <style>
+    /* Skill browser */
+    .skill-browser {
+      margin-top: 3rem;
+      border: 1px solid var(--border);
+      padding: 2rem;
+      background: var(--surface);
+    }
+
+    .skill-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    .skill-tab {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .skill-tab:hover { border-color: var(--accent); color: var(--accent); }
+
+    .skill-tab.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .pill {
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid rgba(0,229,255,0.25);
+      color: var(--accent);
+      background: rgba(0,229,255,0.05);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .pill.learning {
+      border-color: rgba(255,107,53,0.3);
+      color: var(--accent2);
+      background: rgba(255,107,53,0.05);
+    }
+
+    .pill.hidden {
+      display: none;
+    }
+
+    .pills-note {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 1.2rem;
+      letter-spacing: 0.08em;
+    }
+
+    /* Certs */
+    .certs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .cert-badge {
+      flex: 1;
+      min-width: 160px;
+      border: 1px solid var(--border);
+      padding: 1.2rem 1rem;
+      text-align: center;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+
+    .cert-badge:hover { border-color: var(--accent); }
+
+    .cert-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+    .cert-name {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .cert-sub {
+      font-size: 0.62rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
 
   <!-- EXPERIENCE -->
   <section id="experience">
     <p class="section-label reveal">Work History</p>
     <h2 class="reveal">Experience</h2>
 
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-meta">
-          <span class="timeline-date">2020 — Present</span>
-          <span class="timeline-company">Current Organization</span>
-        </div>
-        <div class="timeline-role">Senior IT Infrastructure Engineer</div>
-        <ul class="timeline-desc">
-          <li>Architect and manage hybrid cloud infrastructure spanning on-prem data centers and AWS, supporting 500+ internal users and production workloads.</li>
-          <li>Led automation initiative using Ansible to reduce manual server provisioning time by 70%, enabling consistent, repeatable environment builds.</li>
-          <li>Implemented infrastructure monitoring with Prometheus and Grafana, establishing alerting baselines and reducing incident response time by 40%.</li>
-          <li>Driving containerization of legacy workloads using Docker, laying groundwork for a Kubernetes migration roadmap.</li>
-        </ul>
-        <div class="timeline-tech">
-          <span class="tech-badge">AWS</span><span class="tech-badge">VMware</span>
-          <span class="tech-badge">Ansible</span><span class="tech-badge">Docker</span>
-          <span class="tech-badge">Prometheus</span><span class="tech-badge">Linux</span>
+    <!-- Company group: Ares Management -->
+    <div class="company-group reveal">
+      <div class="company-header">
+        <div class="company-logo-block">AM</div>
+        <div>
+          <div class="company-name">Ares Management Corporation</div>
+          <div class="company-meta">Full-time · 5 yrs 10 mos &nbsp;·&nbsp; Mumbai, Maharashtra, India</div>
         </div>
       </div>
 
+      <div class="timeline" style="margin-top: 1.5rem;">
+        <div class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="timeline-date">Dec 2022 — Present · 3 yrs 4 mos</span>
+            <span class="timeline-company">Hybrid</span>
+          </div>
+          <div class="timeline-role">Senior Associate</div>
+          <ul class="timeline-desc">
+            <li>Manage a complex infrastructure of over 2,000 servers, ensuring optimal performance and security compliance across a global financial services environment.</li>
+            <li>Implement and maintain disaster recovery strategies, minimising RTO/RPO exposure for critical business systems.</li>
+            <li>Collaborate cross-functionally to resolve complex infrastructure incidents and drive blameless post-mortems aligned with SRE principles.</li>
+            <li>Mentor junior engineers, fostering a culture of continuous improvement, operational excellence, and knowledge sharing.</li>
+            <li>Drive significant improvements in system performance and operational efficiency through automation and process standardisation.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span class="tech-badge">SRE / SLA / SLO</span><span class="tech-badge">PagerDuty AIOps</span>
+            <span class="tech-badge">Incident Management</span><span class="tech-badge">ITIL/ITSM</span>
+            <span class="tech-badge">Hybrid Cloud</span><span class="tech-badge">AWS</span>
+            <span class="tech-badge">Azure</span><span class="tech-badge">CrowdStrike</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="timeline-date">Jun 2020 — Dec 2022 · 2 yrs 7 mos</span>
+          </div>
+          <div class="timeline-role">IT Infrastructure &amp; Operations Engineer</div>
+          <ul class="timeline-desc">
+            <li>Maintained and optimised VMware vSphere environments and Windows/Linux server fleets supporting Ares Management's global operations.</li>
+            <li>Administered identity and access management using Okta SSO, CyberArk PAM, and Active Directory with Group Policy enforcement.</li>
+            <li>Managed storage infrastructure including SAN systems and implemented Veeam backup and recovery solutions for enterprise workloads.</li>
+            <li>Supported Microsoft 365 and Azure cloud services, contributing to hybrid cloud strategy and endpoint management via MECM and BigFix.</li>
+            <li>Implemented Infoblox for DNS/DHCP/IPAM and Illumio for micro-segmentation to strengthen network security posture.</li>
+          </ul>
+          <div class="timeline-tech">
+            <span class="tech-badge">VMware vSphere</span><span class="tech-badge">Okta SSO</span>
+            <span class="tech-badge">CyberArk</span><span class="tech-badge">Illumio</span>
+            <span class="tech-badge">Infoblox</span><span class="tech-badge">Veeam</span>
+            <span class="tech-badge">ServiceNow</span><span class="tech-badge">Microsoft Azure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Locuz -->
+    <div class="timeline" style="margin-top: 2.5rem;">
       <div class="timeline-item reveal">
         <div class="timeline-meta">
-          <span class="timeline-date">2017 — 2020</span>
-          <span class="timeline-company">Previous Employer</span>
+          <span class="timeline-date">Mar 2018 — May 2020 · 2 yrs 3 mos</span>
+          <span class="timeline-company">Locuz Enterprise Solutions Ltd · Mumbai, India</span>
         </div>
-        <div class="timeline-role">IT Infrastructure Engineer</div>
+        <div class="timeline-role">Information Technology Specialist</div>
         <ul class="timeline-desc">
-          <li>Managed private cloud infrastructure on OpenStack, including compute, networking, and storage provisioning for internal product teams.</li>
-          <li>Wrote Python and Bash scripts to automate routine operational tasks — patch management, log rotation, backup verification — saving ~15 hrs/week.</li>
-          <li>Designed and maintained VPN, firewall, and VLAN configurations for secure multi-site connectivity across 3 regional offices.</li>
+          <li>Constructed and maintained a robust air-gapped defence infrastructure to secure sensitive data for enterprise clients.</li>
+          <li>Collaborated with stakeholders to assess infrastructure needs and developed tailored solutions that enhanced operational capabilities.</li>
+          <li>Implemented Active Directory 2016 with Group Policies, achieving a 95% compliance rate in security and access control measures.</li>
+          <li>Deployed SimpliVity hyperconverged solutions to host over 100 DMZ servers, optimising performance for critical applications.</li>
+          <li>Conducted training sessions for team members on new technologies and engaged in vendor management to negotiate contracts and ensure timely delivery.</li>
         </ul>
         <div class="timeline-tech">
-          <span class="tech-badge">OpenStack</span><span class="tech-badge">Python</span>
-          <span class="tech-badge">Bash</span><span class="tech-badge">Networking</span>
+          <span class="tech-badge">Active Directory</span><span class="tech-badge">SimpliVity HCI</span>
+          <span class="tech-badge">VMware</span><span class="tech-badge">Microsoft 365</span>
+          <span class="tech-badge">Virtualization</span><span class="tech-badge">Windows Server</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wipro -->
+    <div class="timeline" style="margin-top: 2.5rem;">
+      <div class="timeline-item reveal">
+        <div class="timeline-meta">
+          <span class="timeline-date">May 2017 — Mar 2018 · 11 mos</span>
+          <span class="timeline-company">Wipro Infrastructure Engineering</span>
+        </div>
+        <div class="timeline-role">Server Administrator</div>
+        <ul class="timeline-desc">
+          <li>Managed IT infrastructure for Oriental Insurance, supporting over 10,000 users across the organisation.</li>
+          <li>Conducted comprehensive security monitoring and incident response, reducing vulnerabilities by 30% through proactive initiatives.</li>
+          <li>Coordinated with external vendors for infrastructure upgrades, improving system efficiency by 20%.</li>
+          <li>Developed IT policies to ensure compliance with industry standards and performed regular system audits to identify and remediate risks.</li>
+          <li>Achieved over 25% increase in user satisfaction through streamlined support processes and received management commendation for team contributions.</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-badge">Virtualization</span><span class="tech-badge">IAM</span>
+          <span class="tech-badge">Security Monitoring</span><span class="tech-badge">Incident Response</span>
+          <span class="tech-badge">Windows Server</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swan Solutions -->
+    <div class="timeline" style="margin-top: 2.5rem;">
+      <div class="timeline-item reveal">
+        <div class="timeline-meta">
+          <span class="timeline-date">Nov 2015 — May 2017 · 1 yr 7 mos</span>
+          <span class="timeline-company">Swan Solutions &amp; Services Pvt Ltd · Mumbai Metropolitan Region</span>
+        </div>
+        <div class="timeline-role">System Engineer</div>
+        <ul class="timeline-desc">
+          <li>Managed IT infrastructure for multiple enterprise clients, ensuring compliance with security standards and SLA commitments.</li>
+          <li>Executed a comprehensive Windows 10 migration for over 12,000 endpoints, significantly improving system efficiency and user experience.</li>
+          <li>Configured and managed VMware and Hyper-V environments, optimising resource allocation for over 300 virtual machines.</li>
+          <li>Collaborated with clients to assess IT needs, provided technical support, and delivered training to enhance team members' skills.</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-badge">VMware</span><span class="tech-badge">Hyper-V</span>
+          <span class="tech-badge">Virtualization</span><span class="tech-badge">Windows 10 Migration</span>
           <span class="tech-badge">Linux</span>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-meta">
-          <span class="timeline-date">2014 — 2017</span>
-          <span class="timeline-company">Early Career</span>
-        </div>
-        <div class="timeline-role">Systems Administrator</div>
-        <ul class="timeline-desc">
-          <li>Administered Windows and Linux server environments, handling provisioning, patching, backups, and incident resolution for on-prem infrastructure.</li>
-          <li>Supported virtualization platform migrations from physical to VMware vSphere, improving hardware utilization by 60%.</li>
-          <li>Maintained IT documentation, runbooks, and change management processes in compliance with ITIL frameworks.</li>
-        </ul>
-        <div class="timeline-tech">
-          <span class="tech-badge">VMware vSphere</span><span class="tech-badge">Windows Server</span>
-          <span class="tech-badge">Linux</span><span class="tech-badge">ITIL</span>
-          <span class="tech-badge">Backup & Recovery</span>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .company-group {
+      border: 1px solid var(--border);
+      padding: 2rem;
+      background: var(--surface);
+      margin-bottom: 0.5rem;
+    }
+
+    .company-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .company-logo-block {
+      width: 48px; height: 48px;
+      background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--sans);
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .company-name {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .company-meta {
+      font-size: 0.68rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      letter-spacing: 0.05em;
+    }
+  </style>
 
   <!-- PROJECTS -->
   <section id="projects">
@@ -859,7 +1169,7 @@
       <div class="contact-grid reveal">
         <div class="contact-item">
           <div class="contact-label">Email</div>
-          <a class="contact-value" href="mailto:krushna.panda@email.com">krushna.panda@email.com</a>
+          <a class="contact-value" href="/cdn-cgi/l/email-protection#f49f8681879c9a95da84959a9095b49199959d98da979b99"><span class="__cf_email__" data-cfemail="acc7ded9dfc4c2cd82dccdc2c8cdecc9c1cdc5c082cfc3c1">[email&#160;protected]</span></a>
         </div>
         <div class="contact-item">
           <div class="contact-label">LinkedIn</div>
@@ -876,7 +1186,7 @@
       </div>
 
       <div class="reveal">
-        <a href="mailto:krushna.panda@email.com" class="btn btn-solid" style="font-size: 0.82rem; padding: 1rem 2.5rem;">Send a Message</a>
+        <a href="/cdn-cgi/l/email-protection#19726b6c6a717778376978777d78597c74787075377a7674" class="btn btn-solid" style="font-size: 0.82rem; padding: 1rem 2.5rem;">Send a Message</a>
       </div>
     </div>
   </section>
@@ -890,7 +1200,19 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Skill tab filtering
+    document.getElementById('skillTabs').addEventListener('click', e => {
+      const btn = e.target.closest('.skill-tab');
+      if (!btn) return;
+      document.querySelectorAll('.skill-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      document.querySelectorAll('.pill').forEach(p => {
+        p.classList.toggle('hidden', cat !== 'all' && p.dataset.cat !== cat);
+      });
+    });
+
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver(entries => {
@@ -898,13 +1220,4 @@
         if (entry.isIntersecting) {
           setTimeout(() => entry.target.classList.add('visible'), i * 80);
           observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-
-    // Skill bar animation on scroll
-    const bars = document.querySelectorAll('.skill-level-fill');
-    const barObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-       
+      
